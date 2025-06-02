@@ -89,8 +89,7 @@ namespace DBLTests
         [InlineData(CustomerSegment.Individual, 100, 20, 9)]    // 9% cap
         [InlineData(CustomerSegment.VIP, 100, 10, 20)]          // 15% + 5%
         [InlineData(CustomerSegment.Wholesale, 100, 25, 21)]    // 20% + 1%
-        public async Task ShouldCalculateCorrectDiscount(
-            CustomerSegment segment, decimal totalAmount, int orderHistoryCount, decimal expectedDiscount)
+        public async Task ShouldCalculateCorrectDiscount(CustomerSegment segment, decimal totalAmount, int orderHistoryCount, decimal expectedDiscount)
         {
             var customer = new Customers
             {
